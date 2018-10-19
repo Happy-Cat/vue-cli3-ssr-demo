@@ -12,15 +12,6 @@ yarn run serve
 
 ### Compiles and minifies for production
 ```
-yarn run build
+yarn run build:ssr
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
