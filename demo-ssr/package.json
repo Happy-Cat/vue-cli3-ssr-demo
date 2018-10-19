@@ -5,10 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:client": "vue-cli-service build",
+    "build:server": "cross-env WEBPACK_TARGET=node vue-cli-service build",
+    "build:win": "yarn build:server && mv dist/vue-ssr-server-bundle.json bundle && yarn build:client && mv bundle dist/vue-ssr-server-bundle.json && node server.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
+    "express": "^4.16.4",
     "koa": "^2.5.3",
     "koa-static": "^5.0.0",
     "lodash.merge": "^4.6.1",
